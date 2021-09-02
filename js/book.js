@@ -14,7 +14,7 @@ const loadBook = async () => {
     //If input value in not empty string them we will fetch the data form that url
     else {
         document.getElementById('emptySearchField').style.display = "none";
-        const url = `http://openlibrary.org/search.json?q=${searchText}`;
+        const url = `https://openlibrary.org/search.json?q=${searchText}`;
         const res = await fetch(url);
         const data = await res.json();
         const totalresult = document.getElementById('totalResult');
